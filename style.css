@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Comic Sans MS;
+}
+h1{
+    font-size:40px;
+}
+h2{
+    font-size:40px;
+    color:white;
+}
+h3{
+    font-size:24px;
+}
+p{
+    font-weight:bold;
+}
+body{
+    background: linear-gradient(45deg, #132743 100%, #5585B5 100%);
+}
+/* Side Nav */
+nav{
+background-color: rgba(0, 0, 0, 0.9);
+position:fixed;
+right:0;
+top:0;
+width:180px;
+height:100%;
+z-index:7;
+transition: all 1s ease;
+}
+nav:hover{
+    width:350px;
+}
+.main-links{
+    display: flex;
+    flex-direction:column;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+    gap:24px;
+}
+nav li,a{
+    font-size: 16px;
+    list-style:none;
+    text-decoration:none;
+    color:white;
+}
+.links a:hover{
+    color:#F70776;
+    font-weight: bold;
+}
+
+.logo{
+    width:40%;
+    animation-name:rotate;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+@keyframes rotate{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(180deg);}
+}
+.games-link{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    position: relative;
+}
+.games-link i{
+    display: none;
+}
+.games-link:hover i,.sub-links{
+    display:block;
+    opacity: 100%;
+}
+.sub-links{
+    background-color: rgba(0, 0, 0, 0.9);
+    position:absolute;
+    display:flex;
+    opacity: 0%;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    padding:24px;
+    width:120px;
+    height:200px;
+    top:38%;
+    left:-168px;
+    transition: all .5s .3s ease;
+}
+div:hover .sub-links{
+    opacity: 100%;
+}
+/* Hero Banner */
+.hero-banner{
+    width:100%;
+    height:760px;
+    background-image: url(Images/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.hero-banner::before{
+    content:"";
+    position:absolute;
+    width: 100%;
+    height:100%;
+    background: linear-gradient(90deg, rgba(247, 7, 119, 0.8) 0%, rgba(0, 0, 0, 0.7) 100%);;
+}
+.hero-header{
+    position: absolute;
+    display: flex;
+    width:100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap:24px;
+    color: white;
+}
+.button-primary{
+    padding: 8px;
+    border:2px solid #F70776;
+    border-radius:8px;
+    cursor:pointer;
+    transition:all .8s ease;
+}
+.button-primary:hover{
+    background-color: #F70776;
+    box-shadow:0px 0px 8px .25px;
+    padding: 8px 24px;
+}
+/* Action Section */
+.section{
+    margin-top:5%;
+}
+.title{
+    width:30%;
+    text-align: center;
+    padding:24px 16px;
+    margin:2% auto;
+    border-bottom:solid 6px #F70776;
+}
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    row-gap:24px;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.card{
+    width:30%;
+    height:640px;
+    position:relative;
+    overflow: hidden;
+    cursor:pointer;
+}
+.card img{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    object-position: 50% 30%;
+}
+.card1::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:50%;
+    background:linear-gradient(90deg,rgba(247, 7, 119, 0.7),#000000);
+    transition: all 1s ease;
+    transform-origin:left top;
+}
+.card1:hover::before{
+    transform:skew(90deg);
+}
+.card1::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:50%;
+    bottom: 0;
+    right:0;
+    background:linear-gradient(90deg,rgba(247, 7, 119, 0.7),#000000);
+    transition: all 1s ease;
+    transform-origin:right bottom;
+}
+.card1:hover::after{
+    transform:skew(90deg);
+}
+/* Racing Section */
+/* .shrink{
+    height: 580px;
+} */
+.card2::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:linear-gradient(90deg,rgba(247, 7, 119, 0.7),#000000);
+    bottom:-100%;
+    transition: all 1s ease;
+
+}
+.card2:hover::before{
+    bottom:0;
+}
+.button-secondary{
+    position: absolute;
+    top: 50%;
+    left:36%;
+    padding: 8px;
+    border:2px solid white;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    opacity:0%;
+    transition:all .8s ease;
+}
+.card2:hover .button-secondary{
+    opacity: 100%;
+}
+.button-secondary:hover{
+    background-color: #F70776;
+    border:2px solid #F70776;
+}
+/* Zombie Section */
+.low{
+    position: relative;
+    top:40px;
+}
+footer{
+    height:100px;
+}
+.section{
+    margin-right: 10%;
+}
